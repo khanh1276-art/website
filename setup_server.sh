@@ -144,6 +144,7 @@ pm2 startup systemd -u root --hp /root || true
 
 # 7. Mở Firewall (UFW)
 echo ">>> [7/7] Thiết lập tường lửa..."
+ufw allow 24700/tcp || true
 ufw allow 22/tcp || true
 ufw allow 80/tcp || true
 ufw allow 443/tcp || true
